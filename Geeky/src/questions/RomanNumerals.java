@@ -53,6 +53,10 @@ public class RomanNumerals {
 
     private String getRomanValue(int digit, int place) {
         String value = "";
+
+        if(romanMap.containsKey(digit * place))
+            return romanMap.get(digit * place);
+
         if(digit == 4){
             value = romanMap.get(place) + romanMap.get(5 * place);
             return value;
@@ -60,9 +64,6 @@ public class RomanNumerals {
             value = romanMap.get(place) + romanMap.get(10 * place);
             return value;
         }else{
-            if(romanMap.containsKey(digit * place))
-                return romanMap.get(digit * place);
-
             if(digit > 5){
                 value = romanMap.get(5 * place);
                 digit -= 5;
