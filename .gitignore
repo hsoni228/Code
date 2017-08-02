@@ -1,3 +1,5 @@
 RemoteSystemsTempFiles/*
 .metadata/*
 Geeky/bin/*
+.idea/*
+**.iml
